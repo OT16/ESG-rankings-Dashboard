@@ -1,11 +1,7 @@
-streamlit --version 1.33.0
-matplotlib
-plt
+streamlit==1.33.0
 pandas
 numpy
 seaborn
-matplotlib.pyplot
-sklearn.model_selection
-sklearn.linear_model
-sklearn
-pyngrok
+Pillow
+matplotlib
+scikit-learn
