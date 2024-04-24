@@ -2,7 +2,6 @@ streamlit
 pandas
 numpy
 seaborn
-plt
 matplotlib.pyplot
 sklearn.model_selection
 sklearn.linear_model
