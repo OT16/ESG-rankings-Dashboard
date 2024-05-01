@@ -11,6 +11,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier, plot_tree
 from sklearn.preprocessing import LabelEncoder
 import graphviz
+st.set_option('deprecation.showPyplotGlobalUse', False)
 st.sidebar.header("Dashboard")
 st.sidebar.markdown("---")
 app_mode = st.sidebar.selectbox('Select Page',['Introduction','Visualization','Prediction'])
