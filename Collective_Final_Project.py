@@ -76,7 +76,7 @@ elif app_mode == "Visualization":
   tab2.title('Heatmap Correlation')
 
   # Display the heatmap using seaborn
-  fig2 = sns.heatmap(corrMatrix, annot=True, cmap='coolwarm', fmt='.2f')
+  fig2, x = sns.heatmap(corrMatrix, annot=True, cmap='coolwarm', fmt='.2f')
 
   # Display the plot within the Streamlit app
   tab2.pyplot(fig2)
