@@ -62,7 +62,7 @@ if app_mode == "Introduction":
 elif app_mode == "Visualization":
   st.title("Visualization")
   # DATA VISUALISATION
-  tab1, tab2, tab3, tab4 = st.tabs(["SNS Plot", "Correlation Map", "Line Chart"])
+  tab1, tab2, tab3 = st.tabs(["SNS Plot", "Correlation Map", "Line Chart"])
   #SNS plot
   tab1.subheader("SNS plot")
   tech_df = tech_df.sample(n=10000)
