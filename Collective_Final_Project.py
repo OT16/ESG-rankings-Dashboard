@@ -76,10 +76,10 @@ elif app_mode == "Visualization":
   tab2.title('Heatmap Correlation')
 
   # Display the heatmap using seaborn
-  fig2, x = sns.heatmap(corrMatrix, annot=True, cmap='coolwarm', fmt='.2f')
+  fig2 = sns.heatmap(corrMatrix, annot=True, cmap='coolwarm', fmt='.2f')
 
   # Display the plot within the Streamlit app
-  tab2.pyplot(fig2)
+  tab2.pyplot()
   # highRank = tech_df.groupby(tech_df['ESG_ranking']> tech_df['ESG_ranking'].mean() )
   # highRank.get_group(1).describe()
   # highRank.get_group(0).describe()
