@@ -73,9 +73,13 @@ elif app_mode == "Visualization":
   # heat map code
   cols = ['ESG_ranking', 'Volatility_Buy',  'Sharpe Ratio', 'inflation','PS_ratio','NetProfitMargin_ratio', 'PB_ratio', 'roa_ratio', 'roe_ratio','EPS_ratio'] # possible essential columns
   corrMatrix = tech_df[cols].corr()
-  fig = sns.heatmap(corrMatrix, annot=True, cmap='coolwarm', fmt='.2f')
-  tab2.write("Heatmap Correlation")
-  tab2.pyplot(fig)
+  tab2.title('Heatmap Correlation')
+
+  # Display the heatmap using seaborn
+  sns.heatmap(corrMatrix, annot=True, cmap='coolwarm', fmt='.2f')
+
+  # Display the plot within the Streamlit app
+  tab2.pyplot()
   # highRank = tech_df.groupby(tech_df['ESG_ranking']> tech_df['ESG_ranking'].mean() )
   # highRank.get_group(1).describe()
   # highRank.get_group(0).describe()
