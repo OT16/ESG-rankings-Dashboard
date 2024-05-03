@@ -485,5 +485,7 @@ elif app_mode == "Prediction":
   st.table(df)
 
   # - - - - - - - - - - - - - 
+  st.subheader("Old Feature Importance")
+  st.image('feature_importance')
   st.subheader('Feature Importance')
   st.image('newplot.png')
