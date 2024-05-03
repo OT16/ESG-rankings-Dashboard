@@ -478,6 +478,26 @@ elif app_mode == "Prediction":
       'TT (Sec)': [0.3600, 10.7310, 4.6500, 2.2730, 0.5930, 0.2650, 6.7620, 3.1140, 0.1550, 0.1480,
                     0.8520, 1.1060, 0.1560, 0.1560, 0.2480, 0.2530, 0.1470, 0.1440, 0.2080]
   }
+  """
+  Code for Best Models - PyCaret/MLFlow
+  !pip install pycaret --quiet
+  !pip install datasets --quiet
+  !pip install mlflow --quiet
+  
+  # Load the dataset from PyCaret
+  from pycaret.datasets import get_data
+  from pycaret.regression import setup, compare_models
+  
+  # Load the 'diamond' dataset
+  data = tech_df[cols]
+  
+  # Initialize setup
+  s = setup(data, target='NetProfitMargin_ratio', transform_target=True, log_plots=True, experiment_name='test1')
+  
+  # Compare regression models
+  best_model = compare_models()
+
+  """
   
   df = pd.DataFrame(data)
   
@@ -486,6 +506,6 @@ elif app_mode == "Prediction":
 
   # - - - - - - - - - - - - - 
   st.subheader("Old Feature Importance")
-  st.image('feature_importance')
+  st.image('features_importance')
   st.subheader('Feature Importance')
   st.image('newplot.png')
