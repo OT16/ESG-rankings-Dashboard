@@ -391,7 +391,7 @@ elif app_mode == "Prediction":
   r2_score = metrics.r2_score(y_test, y_pred)
 
   st.write(f"Mean Squared Error: {mse}")
-  st.write(f"R-squared: {r2}")
+  st.write(f"R-squared: {r2_score}")
   st.write("------------------------------------")
 
 # - - - - - - - - - - - - - - DECISION TREE REGRESSOR
