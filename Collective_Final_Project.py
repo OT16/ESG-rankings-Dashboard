@@ -386,6 +386,13 @@ elif app_mode == "Prediction":
   
   # Display the plot within the Streamlit app
   st.pyplot(fig)
+  
+  mse = mean_squared_error(y_test, y_pred)
+  r2 = r2_score(y_test, y_pred)
+
+  st.write(f"Mean Squared Error: {mse}")
+  st.write(f"R-squared: {r2}")
+  st.write("------------------------------------")
 
 # - - - - - - - - - - - - - - DECISION TREE REGRESSOR
   st.subheader('Decision Tree Regressor')
